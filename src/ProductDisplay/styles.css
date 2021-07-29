@@ -29,10 +29,11 @@
 }
 
 .product__price {
-  font-size: 3rem;
+  font-size: 2rem;
   background-color: orange;
   padding: 20px;
   border-radius: 5px;
+  white-space: nowrap;
 }
 
 .product__availability {
@@ -72,7 +73,7 @@
   padding: 30px 20px;
   border-radius: 5px;
   color: white;
-  font-size: 1.3rem;
+  font-size: 2.1rem;
   font-weight: 800;
   background-color: green;
   display: flex;

@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+# Products
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Considerations:
 
-## Available Scripts
+- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- I have used Netlify for hosting the entire app (front and backend using Lambda functions).
+-
 
-In the project directory, you can run:
+## Backend:
 
-### `npm start`
+- The data provided by you has been trimmed to 50 records (only for testing purposes), converted into a JSON file and appended as a file inside the backend.
+- The 'products' endpoint serves the products list in JSON format.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Frontend:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Due to time constraints I couldn't implement table pagination & filtering, but we can discuss later how I would approach the implementation of these features.
+- React-table has been used for formatting the Products list in a table format.
+- Routing has been implemented with react-router.
+- The root page displays a list of products that the user can navigate to find basic details (e.g. price, description).
+- Should the user be interested in a specific product, they can do so by clicking anywhere in the product row. The selected product is saved, and the user will be redirected to '/product'.
+- '/product' will display details of the selected product in a card. The user can see additional details, and in case interested, can be redirected to the store by clicking in the specific button. If the user wants to continue the search, a button is also provided to do so.
+- Basic error handling and responsiveness has been implemented, but of course this can be further expanded.
 
-### `npm test`
+## Improvement areas:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- As mentioned, implementing pagination and filtering to improve user experience and facilitate slicing results.
+- Store selected product in localStorage to show the relevant product to the user if /product page is reloaded.
+- Write down unit & integration tests to cover critical phases (products list loaded, product selection is successfully recorded when click occurs)
+- Overall, the UI is basic, and it can be heavily improved.
+- Monitor app performance and stability, introduce logging to understand how the app is performing and detect bugs/errors timely.
+- Introduce user authentication, and track user preferences to potentially target them with products they might be interested (asking for consent first).
+- Thinking about a big number of products being loaded, to further load products on an as-needed basis to avoid impacting performance.
+- Improve responsiveness of products table, and the card displaying the product details when selected.
+- Add comments in code to clarify functionality and description to facilitate maintenance.

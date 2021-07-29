@@ -48,7 +48,13 @@ const ProductDisplay = ({ product }) => {
             rel="noreferrer"
             className="product__link__store"
           >
-            <ShopIcon style={{ paddingRight: "10px" }} />
+            <ShopIcon
+              style={{
+                paddingRight: "20px",
+                fontSize: "2.1rem",
+                color: "lightgray",
+              }}
+            />
             Buy in Store
           </a>
         </div>
