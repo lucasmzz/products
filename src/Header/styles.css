@@ -1,0 +1,30 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 50px;
+  background-color: rgb(31, 46, 104);
+  padding: 10px 30px;
+}
+
+.header__logo p {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 800;
+}
+
+.header__options {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.header__options__logout {
+  padding: 10px;
+  margin: 10px;
+  outline: 0;
+  border: 0;
+  background: rgba(0, 0, 0, 0.165);
+  color: #fff;
+  font-size: 1.5rem;
+}
