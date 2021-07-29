@@ -1,0 +1,15 @@
+#products__table__container {
+  margin: 50px auto;
+  width: 80%;
+}
+
+#products__table__container table {
+  border-collapse: collapse;
+}
+
+.products__table__row {
+  margin: 40px;
+}
+.products__table__row:hover {
+  background-color: rgba(132, 247, 255, 0.186);
+}
